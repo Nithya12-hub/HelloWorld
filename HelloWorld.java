@@ -1,16 +1,13 @@
 public class HelloWorld {
-
     public static void main(String[] args) {
 
-        String name;
-
-        // Check if user provided command line argument
-        if (args.length > 0) {
-            name = args[0];
+        if (args.length == 0) {
+            System.out.println("Hello World");
         } else {
-            name = "World";
+            for (String name : args) {
+                System.out.println("Hello " + name);
+            }
         }
 
-        System.out.println("Hello " + name);
     }
 }
